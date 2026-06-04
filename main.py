@@ -951,7 +951,7 @@ def load_datasets_and_train():
 
     # Drop leakage columns
     CBC_LEAKAGE_COLS = [
-        'LBXHGB', 'LBXHCT', 'LBXRBCSI', 'LBXMCVSI', 'LBXMCHSI', 'LBXRDW', 
+        'LBXHGB', 'LBXHCT', 'LBXMCVSI', 'LBXMCHSI', 
         'iron_deficient', 'PRS_category', 'SEQN'
     ]
     drop_cols = [c for c in CBC_LEAKAGE_COLS if c in df.columns]
@@ -989,7 +989,7 @@ def load_datasets_and_train():
         colsample_bytree=0.8,
         reg_alpha=0.5,
         reg_lambda=2.0,
-        scale_pos_weight=4.0,
+        scale_pos_weight=1.5,
         eval_metric='logloss',
         early_stopping_rounds=30,
         random_state=42,
