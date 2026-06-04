@@ -951,7 +951,7 @@ def load_datasets_and_train():
 
     # Drop leakage columns
     CBC_LEAKAGE_COLS = [
-        'LBXHGB', 'LBXHCT', 'LBXMCVSI', 'LBXMCHSI', 
+        'LBXHGB', 'LBXHCT', 'LBXMCHSI', 
         'iron_deficient', 'PRS_category', 'SEQN'
     ]
     drop_cols = [c for c in CBC_LEAKAGE_COLS if c in df.columns]
