@@ -1,0 +1,17 @@
+# Python Virtual Environment
+venv/
+ENV/
+env/
+.env
+
+# Python Cache & Compiled files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Project logs
+*.log

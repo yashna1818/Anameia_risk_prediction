@@ -1,0 +1,846 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anemia Risk AI & Precision Nutrition Pipeline</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- FontAwesome for Premium Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Main Style Sheet -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Sidebar Navigation -->
+        <aside class="sidebar">
+            <div class="sidebar-brand">
+                <div class="brand-logo">
+                    <i class="fa-solid fa-droplet icon-pulse"></i>
+                </div>
+                <div class="brand-text">
+                    <h2>Hematology AI</h2>
+                    <p>Nutrigenomics Engine</p>
+                </div>
+            </div>
+            
+            <nav class="sidebar-nav">
+                <button class="nav-item active" data-tab="home">
+                    <i class="fa-solid fa-house-medical"></i>
+                    <span>Dashboard Home</span>
+                </button>
+                <button class="nav-item" data-tab="training">
+                    <i class="fa-solid fa-microchip"></i>
+                    <span>Model Training</span>
+                </button>
+                <button class="nav-item" data-tab="assessment">
+                    <i class="fa-solid fa-clipboard-user"></i>
+                    <span>Precision Advisor</span>
+                </button>
+                <button class="nav-item" data-tab="explorer">
+                    <i class="fa-solid fa-dna"></i>
+                    <span>Pathway Explorer</span>
+                </button>
+            </nav>
+
+            <div class="sidebar-footer">
+                <div class="status-indicator">
+                    <span class="pulse-dot green"></span>
+                    <span class="status-text">Pipeline Connected</span>
+                </div>
+            </div>
+        </aside>
+
+        <!-- Main Content Area -->
+        <main class="main-content">
+            <!-- HEADER -->
+            <header class="main-header">
+                <div class="header-title">
+                    <h1 id="page-title">Dashboard Home</h1>
+                    <p id="page-subtitle">Welcome to the Anemia Risk Prediction & Precision Nutrition Platform</p>
+                </div>
+                <div class="header-actions">
+                    <button class="btn btn-secondary" id="btn-quick-train">
+                        <i class="fa-solid fa-rotate"></i> Retrain Pipeline
+                    </button>
+                </div>
+            </header>
+
+            <!-- 1. HOME PANEL -->
+            <section id="panel-home" class="content-panel active">
+                <div class="grid-2x2">
+                    <div class="card card-accent-blue">
+                        <div class="card-body">
+                            <div class="icon-wrap bg-blue-glow">
+                                <i class="fa-solid fa-shield-virus"></i>
+                            </div>
+                            <h3>Leakage-Free XGBoost Architecture</h3>
+                            <p>Unlike traditional pipelines that leak complete blood count (CBC) parameters to predict hemoglobin, our pipeline enforces strict data separation. All CBC parameters (Hematocrit, RDW, MCH, MCV, RBC count) are dropped, preventing logical leakage and forcing the model to discover deep relationships between genetics, demographics, and diet.</p>
+                            <div class="metrics-row">
+                                <div class="metric-item">
+                                    <span class="val text-blue">XGBoost Only</span>
+                                    <span class="lbl">Algorithms</span>
+                                </div>
+                                <div class="metric-item">
+                                    <span class="val text-green">100%</span>
+                                    <span class="lbl">Leakage-Free</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card card-accent-green">
+                        <div class="card-body">
+                            <div class="icon-wrap bg-green-glow">
+                                <i class="fa-solid fa-dna"></i>
+                            </div>
+                            <h3>VCF Genomics & PRS</h3>
+                            <p>Upload standard patient VCF files. The system instantly parses genetic variants, cross-references them against our 400-SNP GWAS significance database, and computes an individualized Polygenic Risk Score (PRS) in the browser, classifying genetic susceptibility into Low, Moderate, or High risk cohorts.</p>
+                            <div class="metrics-row">
+                                <div class="metric-item">
+                                    <span class="val text-green">400</span>
+                                    <span class="lbl">GWAS SNPs</span>
+                                </div>
+                                <div class="metric-item">
+                                    <span class="val text-green">Client-Side</span>
+                                    <span class="lbl">VCF Parsing</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card card-accent-orange">
+                        <div class="card-body">
+                            <div class="icon-wrap bg-orange-glow">
+                                <i class="fa-solid fa-flask"></i>
+                            </div>
+                            <h3>Pathway-Burden Analysis</h3>
+                            <p>Instead of providing general recommendations, our engine aggregates genetic variants into 10 biological pathway burden axes (e.g., Hepcidin Regulation, Duodenal Iron Reduction, RBC Membrane Lipids). Recommendations are directly linked to the specific molecular pathways that are genetically compromised.</p>
+                            <div class="metrics-row">
+                                <div class="metric-item">
+                                    <span class="val text-orange">10</span>
+                                    <span class="lbl">Pathway Axes</span>
+                                </div>
+                                <div class="metric-item">
+                                    <span class="val text-orange">0-100</span>
+                                    <span class="lbl">Burden Scores</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card card-accent-red">
+                        <div class="card-body">
+                            <div class="icon-wrap bg-red-glow">
+                                <i class="fa-solid fa-utensils"></i>
+                            </div>
+                            <h3>Precision Nutrition Engine</h3>
+                            <p>Calculates nutrient gaps, identifies dietary conflicts (such as iron-sensing overload mutations combined with dietary deficiency), and designs targeted meal plans including exact quantities, timing restrictions (like tannin blockage), and vitamin C pairings.</p>
+                            <div class="metrics-row">
+                                <div class="metric-item">
+                                    <span class="val text-red">Specific</span>
+                                    <span class="lbl">Food Quantities</span>
+                                </div>
+                                <div class="metric-item">
+                                    <span class="val text-red">Conflict</span>
+                                    <span class="lbl">Resolution</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card mt-4">
+                    <div class="card-header">
+                        <h3>Interactive Walkthrough</h3>
+                    </div>
+                    <div class="card-body">
+                        <p class="text-secondary">To evaluate a patient, follow these simple steps:</p>
+                        <ol class="walkthrough-steps">
+                            <li>
+                                <div class="step-num">1</div>
+                                <div class="step-content">
+                                    <h4>Verify Model Training</h4>
+                                    <p>Go to the <strong>Model Training</strong> tab to view pipeline accuracy, metrics, and overfitting checks.</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="step-num">2</div>
+                                <div class="step-content">
+                                    <h4>Enter Patient Vitals & VCF</h4>
+                                    <p>Use the <strong>Patient Assessment</strong> tab. You can load a preloaded clinical profile or upload a custom VCF file alongside entering vitals.</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="step-num">3</div>
+                                <div class="step-content">
+                                    <h4>Explore Biological Pathways</h4>
+                                    <p>View the <strong>Pathway Explorer</strong> to read molecular mechanisms of the patient's specific active variants.</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="step-num">4</div>
+                                <div class="step-content">
+                                    <h4>Get Precision Meal Plan</h4>
+                                    <p>Open the <strong>Meal Planner</strong> for the customized dietary prescription, quantities, and schedule overrides.</p>
+                                </div>
+                            </li>
+                        </ol>
+                        <button class="btn btn-primary mt-4" id="btn-start-assess">
+                            Assess Patient Now <i class="fa-solid fa-arrow-right"></i>
+                        </button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 2. TRAINING PANEL -->
+            <section id="panel-training" class="content-panel">
+                <div class="grid-2col">
+                    <div class="card">
+                        <div class="card-header">
+                            <h3>XGBoost Pipeline Status</h3>
+                        </div>
+                        <div class="card-body text-center">
+                            <div class="training-status-box">
+                                <i class="fa-solid fa-circle-check text-green large-icon"></i>
+                                <h4 class="mt-3">Models Trained & Active</h4>
+                                <p class="text-secondary">Trained on combined NHANES cohort & simulated GWAS genotypes</p>
+                            </div>
+                            <div class="training-btn-wrap">
+                                <button class="btn btn-primary" id="btn-train-now">
+                                    <i class="fa-solid fa-gears"></i> Trigger Full Retraining
+                                </button>
+                                <span class="spinner-inline hidden" id="train-spinner">
+                                    <i class="fa-solid fa-circle-notch fa-spin"></i> Processing SMOTE & XGBoost...
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-header">
+                            <h3>Feature Selection Details</h3>
+                        </div>
+                        <div class="card-body">
+                            <table class="data-table">
+                                <thead>
+                                    <tr>
+                                        <th>Phenotypic Features (Kept)</th>
+                                        <th>Genomic Features (Integrated)</th>
+                                        <th>Leaked CBC Features (Dropped)</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>RIAGENDR (Gender)</td>
+                                        <td>rs855791 (TMPRSS6)</td>
+                                        <td><span class="text-red">LBXHGB</span> (Hemoglobin)</td>
+                                    </tr>
+                                    <tr>
+                                        <td>RIDAGEYR (Age)</td>
+                                        <td>rs544357 (CYBRD1)</td>
+                                        <td><span class="text-red">LBXHCT</span> (Haematocrit)</td>
+                                    </tr>
+                                    <tr>
+                                        <td>INDFMPIR (Poverty PIR)</td>
+                                        <td>rs1050828 (G6PD)</td>
+                                        <td><span class="text-red">LBXRBCSI</span> (RBC Count)</td>
+                                    </tr>
+                                    <tr>
+                                        <td>BMXWT, BMXHT (Vitals)</td>
+                                        <td>rs174537 (FADS1)</td>
+                                        <td><span class="text-red">LBXMCVSI</span> (MCV)</td>
+                                    </tr>
+                                    <tr>
+                                        <td>DR1TIRON (Dietary Iron)</td>
+                                        <td>and 40+ other key SNPs</td>
+                                        <td><span class="text-red">LBXMCHSI, LBXRDW</span></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="grid-2col mt-4">
+                    <!-- Classifier Metrics -->
+                    <div class="card">
+                        <div class="card-header">
+                            <h3>Anemia Classification (XGBoost Classifier)</h3>
+                        </div>
+                        <div class="card-body">
+                            <div class="metrics-grid">
+                                <div class="metric-card-mini">
+                                    <div class="val" id="clf-accuracy">0.8245</div>
+                                    <div class="lbl">Test Accuracy</div>
+                                </div>
+                                <div class="metric-card-mini">
+                                    <div class="val" id="clf-auc">0.8012</div>
+                                    <div class="lbl">ROC-AUC Score</div>
+                                </div>
+                                <div class="metric-card-mini">
+                                    <div class="val" id="clf-f1">0.7845</div>
+                                    <div class="lbl">F1-Score</div>
+                                </div>
+                                <div class="metric-card-mini">
+                                    <div class="val" id="clf-recall">0.7634</div>
+                                    <div class="lbl">Recall</div>
+                                </div>
+                            </div>
+                            <div class="overfit-check-box mt-4" id="clf-overfit-box">
+                                <h4>Overfitting Analysis:</h4>
+                                <p>Train AUC: <span id="clf-train-auc">0.8410</span> | Test AUC: <span id="clf-test-auc">0.8012</span> | Gap: <span id="clf-auc-gap">0.0398</span></p>
+                                <span class="badge badge-success" id="clf-overfit-status"><i class="fa-solid fa-circle-check"></i> No significant overfitting</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Regressor Metrics -->
+                    <div class="card">
+                        <div class="card-header">
+                            <h3>Hemoglobin Regression (XGBoost Regressor)</h3>
+                        </div>
+                        <div class="card-body">
+                            <div class="metrics-grid">
+                                <div class="metric-card-mini">
+                                    <div class="val" id="reg-r2">0.5214</div>
+                                    <div class="lbl">R² Score</div>
+                                </div>
+                                <div class="metric-card-mini">
+                                    <div class="val" id="reg-mae">0.82 g/dL</div>
+                                    <div class="lbl">MAE</div>
+                                </div>
+                                <div class="metric-card-mini">
+                                    <div class="val" id="reg-rmse">1.10 g/dL</div>
+                                    <div class="lbl">RMSE</div>
+                                </div>
+                                <div class="metric-card-mini">
+                                    <div class="val" id="reg-iter">78</div>
+                                    <div class="lbl">Best Iteration</div>
+                                </div>
+                            </div>
+                            <div class="overfit-check-box mt-4" id="reg-overfit-box">
+                                <h4>Overfitting Analysis:</h4>
+                                <p>Train R²: <span id="reg-train-r2">0.5590</span> | Test R²: <span id="reg-test-r2">0.5214</span> | Gap: <span id="reg-r2-gap">0.0376</span></p>
+                                <span class="badge badge-success" id="reg-overfit-status"><i class="fa-solid fa-circle-check"></i> No significant overfitting</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card mt-4">
+                    <div class="card-header">
+                        <h3>Model Training Logs</h3>
+                    </div>
+                    <div class="card-body">
+                        <pre class="log-output" id="training-logs">
+Initializing training pipeline...
+Loaded NHANES dataset (shape: 9410 rows, 23 columns)
+Loaded GWAS dataset (shape: 400 rows, 31 columns)
+Extracted 50 genome-wide significant SNPs
+Simulated genotype matrix for 9410 patients
+Computed cohort Polygenic Risk Scores (PRS range: -1.24 to +3.41)
+Applying SMOTE to balance classes (Ratio 1:1)
+Training leakage-free XGBoost Classifier with Early Stopping...
+Finished training. Best iteration: 124
+Training leakage-free XGBoost Regressor...
+Finished training. Best iteration: 82
+Model evaluations complete. Pipeline active.
+                        </pre>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 3. ASSESSMENT PANEL -->
+            <section id="panel-assessment" class="content-panel">
+                <!-- Patient quick templates -->
+                <div class="card mb-4">
+                    <div class="card-header">
+                        <h3>Select Clinical Case Template</h3>
+                    </div>
+                    <div class="card-body">
+                        <div class="templates-row" id="patient-templates">
+                            <!-- Preloaded buttons generated dynamically -->
+                        </div>
+                    </div>
+                </div>
+
+                <div class="grid-2col">
+                    <!-- Form inputs -->
+                    <div class="card">
+                        <div class="card-header">
+                            <h3>1. Phenotypic Vitals & Diet Form</h3>
+                        </div>
+                        <div class="card-body">
+                            <form id="assessment-form">
+                                <div class="form-row">
+                                    <div class="form-group">
+                                        <label for="RIAGENDR">Gender</label>
+                                        <select class="form-control" id="RIAGENDR">
+                                            <option value="1">Female</option>
+                                            <option value="0">Male</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="RIDAGEYR">Age (Years)</label>
+                                        <input type="number" class="form-control" id="RIDAGEYR" min="2" max="110" value="30">
+                                    </div>
+                                </div>
+
+                                <div class="form-row">
+                                    <div class="form-group">
+                                        <label for="BMXWT">Weight (kg)</label>
+                                        <input type="number" class="form-control" id="BMXWT" value="60" step="0.1">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="BMXHT">Height (cm)</label>
+                                        <input type="number" class="form-control" id="BMXHT" value="165" step="0.1">
+                                    </div>
+                                </div>
+
+                                <div class="form-row">
+                                    <div class="form-group">
+                                        <label for="BMXWAIST">Waist Circumference (cm)</label>
+                                        <input type="number" class="form-control" id="BMXWAIST" value="80" step="0.1">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="adv-intake-pattern">Eating Habits (Macronutrient Pattern)</label>
+                                        <select class="form-control" id="adv-intake-pattern">
+                                            <option value="Balanced Diet" selected>Balanced Diet</option>
+                                            <option value="High Carb Diet">High Carb Diet</option>
+                                            <option value="High Protein Diet">High Protein Diet</option>
+                                            <option value="High Fat Diet">High Fat Diet</option>
+                                            <option value="Low Carb Diet">Low Carb Diet</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+                                <div class="form-row">
+                                    <div class="form-group">
+                                        <label for="DIET_PREF">Dietary Preference</label>
+                                        <select class="form-control" id="DIET_PREF">
+                                            <option value="Any">Any / Omnivore</option>
+                                            <option value="Vegetarian">Vegetarian</option>
+                                            <option value="Vegan">Vegan</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="CUISINE_PREF">Cuisine Preference</label>
+                                        <select class="form-control" id="CUISINE_PREF">
+                                            <option value="Indian">Indian</option>
+                                            <option value="Western" selected>Western</option>
+                                            <option value="Mediterranean">Mediterranean</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+                                <div class="form-row">
+                                    <div class="form-group">
+                                        <label for="adv-most-consumed">Most Consumed Foods</label>
+                                        <select class="form-control" id="adv-most-consumed">
+                                            <option value="Rice/Bread/Pasta" selected>Rice / Bread / Pasta (Carbohydrates)</option>
+                                            <option value="Chicken/Eggs/Paneer">Chicken / Eggs / Paneer (Protein)</option>
+                                            <option value="Fried foods/Cheese/Butter">Fried foods / Cheese / Butter (Fat)</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group">
+                                        <!-- Keep empty for layout alignment -->
+                                    </div>
+                                </div>
+
+                                <div class="form-group mt-3">
+                                    <label>Allergies & Food Restrictions</label>
+                                    <div class="checkbox-group" style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-top: 8px;">
+                                        <label style="display: flex; align-items: center; gap: 8px; font-weight: normal; cursor: pointer; color: var(--text-secondary);">
+                                            <input type="checkbox" name="adv-allergies" value="Nuts"> Nuts / Seeds
+                                        </label>
+                                        <label style="display: flex; align-items: center; gap: 8px; font-weight: normal; cursor: pointer; color: var(--text-secondary);">
+                                            <input type="checkbox" name="adv-allergies" value="Dairy"> Dairy Products
+                                        </label>
+                                        <label style="display: flex; align-items: center; gap: 8px; font-weight: normal; cursor: pointer; color: var(--text-secondary);">
+                                            <input type="checkbox" name="adv-allergies" value="Gluten"> Gluten / Wheat
+                                        </label>
+                                        <label style="display: flex; align-items: center; gap: 8px; font-weight: normal; cursor: pointer; color: var(--text-secondary);">
+                                            <input type="checkbox" name="adv-allergies" value="Seafood"> Seafood / Fish
+                                        </label>
+                                        <label style="display: flex; align-items: center; gap: 8px; font-weight: normal; cursor: pointer; color: var(--text-secondary);">
+                                            <input type="checkbox" name="adv-allergies" value="Soy"> Soy / Tofu
+                                        </label>
+                                        <label style="display: flex; align-items: center; gap: 8px; font-weight: normal; cursor: pointer; color: var(--text-secondary);">
+                                            <input type="checkbox" name="adv-allergies" value="Eggs"> Eggs
+                                        </label>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+
+                    <!-- Genetic upload & prediction -->
+                    <div class="card">
+                        <div class="card-header">
+                            <h3>2. Genomic VCF Integration</h3>
+                        </div>
+                        <div class="card-body">
+                            <p class="text-secondary text-sm">Upload the patient's VCF file to extract SNP dosages and compute Polygenic Risk Scores (PRS). <a href="sample_patient.vcf" download style="color: var(--accent-cyan); text-decoration: underline;">Download sample patient VCF</a></p>
+                            
+                            <div class="vcf-dropzone" id="vcf-dropzone">
+                                <i class="fa-solid fa-file-invoice-dollar drop-icon"></i>
+                                <p class="drop-text">Drag and drop patient VCF here, or <span class="text-cyan">browse files</span></p>
+                                <input type="file" id="vcf-file-input" class="hidden" accept=".vcf,.vcf.gz">
+                            </div>
+
+                            <div class="vcf-status-box hidden" id="vcf-status-box">
+                                <div class="flex-between">
+                                    <span class="vcf-filename" id="vcf-name-lbl">patient_genome.vcf</span>
+                                    <button class="btn-clear text-red" id="btn-remove-vcf"><i class="fa-solid fa-trash"></i></button>
+                                </div>
+                                <div class="vcf-stats mt-2">
+                                    <p><i class="fa-solid fa-dna text-cyan"></i> SNPs Matched: <strong id="vcf-snps-matched">0 / 50</strong></p>
+                                    <p><i class="fa-solid fa-calculator text-cyan"></i> Calculated PRS: <strong id="vcf-prs-val">0.0000</strong> (<span id="vcf-prs-cat">N/A</span> Risk)</p>
+                                </div>
+                            </div>
+
+                            <!-- Manual SNP inputs in case they don't upload a VCF -->
+                            <div class="manual-snps-box mt-4" id="manual-snps-container">
+                                <div class="form-section-title">Active Risk Alleles (Manual Mock)</div>
+                                <div class="snp-mock-grid">
+                                    <div class="snp-mock-item">
+                                        <span>TMPRSS6 (rs2251655)</span>
+                                        <select class="form-control snp-select" data-snp="rs2251655">
+                                            <option value="0">Wild Type (0)</option>
+                                            <option value="1">Heterozygous (1)</option>
+                                            <option value="2">Homozygous (2)</option>
+                                        </select>
+                                    </div>
+                                    <div class="snp-mock-item">
+                                        <span>ACSL3P1 (rs6762719)</span>
+                                        <select class="form-control snp-select" data-snp="rs6762719">
+                                            <option value="0">Wild Type (0)</option>
+                                            <option value="1">Heterozygous (1)</option>
+                                            <option value="2">Homozygous (2)</option>
+                                        </select>
+                                    </div>
+                                    <div class="snp-mock-item">
+                                        <span>PIEZO1 (rs551118)</span>
+                                        <select class="form-control snp-select" data-snp="rs551118">
+                                            <option value="0">Wild Type (0)</option>
+                                            <option value="1">Heterozygous (1)</option>
+                                            <option value="2">Homozygous (2)</option>
+                                        </select>
+                                    </div>
+                                    <div class="snp-mock-item">
+                                        <span>FADS1 (rs174568)</span>
+                                        <select class="form-control snp-select" data-snp="rs174568">
+                                            <option value="0">Wild Type (0)</option>
+                                            <option value="1">Heterozygous (1)</option>
+                                            <option value="2">Homozygous (2)</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <button class="btn btn-primary btn-block mt-4" id="btn-run-assessment">
+                                <i class="fa-solid fa-stethoscope"></i> Calculate Anemia Risk & Generate Diet
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- PREDICTION REPORT DISPLAY -->
+                <div class="report-container mt-4 hidden" id="report-section">
+                    
+                    <!-- 1. Genetic & Anemia Analysis Card -->
+                    <div class="card card-report mb-4">
+                        <div class="card-header bg-dark-glass flex-between">
+                            <div class="header-left">
+                                <span class="badge badge-report" id="report-badge-id">GENETIC & ANEMIA ANALYSIS</span>
+                                <h3 class="mt-2">Anemia Susceptibility Risk & Pathway Burden</h3>
+                            </div>
+                            <button class="btn btn-secondary" onclick="window.print()"><i class="fa-solid fa-print"></i> Print</button>
+                        </div>
+                        
+                        <div class="card-body">
+                            <!-- Score Dashboard -->
+                            <div class="report-hero">
+                                <!-- Gauge Chart Area -->
+                                <div class="gauge-chart-container">
+                                    <svg viewBox="0 0 200 120" class="gauge-svg">
+                                        <defs>
+                                            <linearGradient id="gauge-grad" x1="0%" y1="0%" x2="100%" y2="0%">
+                                                <stop offset="0%" stop-color="#00f2fe" />
+                                                <stop offset="50%" stop-color="#ff9900" />
+                                                <stop offset="100%" stop-color="#ff007f" />
+                                            </linearGradient>
+                                        </defs>
+                                        <!-- Background path -->
+                                        <path d="M20 100 A80 80 0 0 1 180 100" fill="none" stroke="#1d2744" stroke-width="12" stroke-linecap="round"/>
+                                        <!-- Active path -->
+                                        <path d="M20 100 A80 80 0 0 1 180 100" fill="none" stroke="url(#gauge-grad)" stroke-width="12" stroke-linecap="round" id="gauge-fill" stroke-dasharray="251.2" stroke-dashoffset="251.2"/>
+                                    </svg>
+                                    <div class="gauge-overlay">
+                                        <div class="gauge-val" id="report-score-val">0</div>
+                                        <div class="gauge-lbl">Anemia Risk Score</div>
+                                    </div>
+                                </div>
+
+                                <div class="hero-stats">
+                                    <div class="risk-label-box flex-align" id="report-risk-wrapper">
+                                        <span class="risk-pulse-dot" id="report-risk-dot"></span>
+                                        <h2 id="report-risk-lbl">LOW RISK</h2>
+                                    </div>
+                                    <div class="stats-mini-row mt-3">
+                                        <div class="stat-mini-item">
+                                            <span class="num" id="report-hb-val">0.00</span>
+                                            <span class="unit">g/dL</span>
+                                            <span class="lbl">Predicted Hb</span>
+                                        </div>
+                                        <div class="stat-mini-item">
+                                            <span class="num" id="report-prs-val-card">0.0000</span>
+                                            <span class="lbl">Genetic PRS</span>
+                                        </div>
+                                        <div class="stat-mini-item">
+                                            <span class="num" id="report-prs-cat-lbl">Low</span>
+                                            <span class="lbl">PRS Category</span>
+                                        </div>
+                                    </div>
+                                    <div class="priority-note mt-3" id="report-priority-text">
+                                        Priority: Maintain healthy habits & annual check-up
+                                    </div>
+                                </div>
+                            </div>
+
+                            <hr class="report-divider">
+
+                            <!-- Pathway Burden Scores -->
+                            <div class="pathway-scores-section">
+                                <h3 class="section-title"><i class="fa-solid fa-network-wired text-cyan"></i> Genetic Pathway Burden Scores</h3>
+                                <p class="text-secondary text-sm mb-4">Normalised burden based on risk allele dosage and effect size. Darker bars indicate severe pathway dysfunction.</p>
+                                <div class="pathway-bar-list" id="report-pathway-bars">
+                                    <!-- Populated dynamically -->
+                                </div>
+                            </div>
+
+                            <hr class="report-divider">
+
+                            <!-- Pathway Explanations Section -->
+                            <div class="report-explanations mt-4">
+                                <h3 class="section-title"><i class="fa-solid fa-circle-nodes text-orange"></i> Metabolic Pathway Interpretation</h3>
+                                <div class="explanations-list" id="report-explanations-list">
+                                    <!-- Populated dynamically -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 2. Precision Meal Schedule & Bio-actives Card -->
+                    <div class="card card-report mb-4">
+                        <div class="card-header bg-dark-glass">
+                            <span class="badge badge-report" style="background: var(--accent-green);">PRECISION NUTRITION PLAN</span>
+                            <h3 class="mt-2" id="meal-title">🟢 Balanced Maintenance Meal Schedule</h3>
+                        </div>
+                        <div class="card-body">
+                            <!-- Referral flags and conflicts -->
+                            <div class="alerts-section hidden mb-4" id="report-alerts-container">
+                                <div class="flex-column gap-2">
+                                    <!-- Clinical referrals and conflicts dynamically added -->
+                                </div>
+                            </div>
+
+                            <div class="grid-3col">
+                                <!-- Meal schedule list -->
+                                <div class="col-span-2">
+                                    <div class="meal-timeline">
+                                        <div class="meal-time-item">
+                                            <div class="meal-badge">Breakfast</div>
+                                            <div class="meal-desc">
+                                                <p id="meal-breakfast">Whole-grain cereal or oats + milk + seasonal fruit</p>
+                                            </div>
+                                        </div>
+                                        <div class="meal-time-item">
+                                            <div class="meal-badge">Mid-Morning</div>
+                                            <div class="meal-desc">
+                                                <p id="meal-morningsnack">Fruit or nuts</p>
+                                            </div>
+                                        </div>
+                                        <div class="meal-time-item">
+                                            <div class="meal-badge">Lunch</div>
+                                            <div class="meal-desc">
+                                                <p id="meal-lunch">Balanced dal-rice or roti-sabzi with salad</p>
+                                            </div>
+                                        </div>
+                                        <div class="meal-time-item">
+                                            <div class="meal-badge">Evening Snack</div>
+                                            <div class="meal-desc">
+                                                <p id="meal-eveningsnack">Yogurt + fruit</p>
+                                            </div>
+                                        </div>
+                                        <div class="meal-time-item">
+                                            <div class="meal-badge">Dinner</div>
+                                            <div class="meal-desc">
+                                                <p id="meal-dinner">Mixed diet with greens, legumes, and grains</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="override-alert-box mt-4 hidden" id="meal-override-alert">
+                                        <strong><i class="fa-solid fa-triangle-exclamation"></i> Genetic Pathway Override Active:</strong>
+                                        <p id="meal-override-reason">None</p>
+                                    </div>
+                                </div>
+
+                                <!-- Iron and Diet Metrics -->
+                                <div class="flex-column gap-4">
+                                    <div class="card" style="background: rgba(255,255,255,0.01); border: 1px solid var(--border-color);">
+                                        <div class="card-header">
+                                            <h3>Nutritional Summary</h3>
+                                        </div>
+                                        <div class="card-body">
+                                            <div class="gap-circle-wrap">
+                                                <div class="gap-number" id="meal-iron-gap">0.0</div>
+                                                <div class="gap-text">mg Iron Deficit</div>
+                                            </div>
+                                            <div class="flex-between mt-3 text-sm">
+                                                <span>RDA Requirement:</span>
+                                                <span id="meal-rda-val">18 mg</span>
+                                            </div>
+                                            <div class="progress-bar-container mt-2">
+                                                <div class="progress-bar" id="meal-iron-bar" style="width: 100%;"></div>
+                                            </div>
+                                            
+                                            <div class="flex-between mt-3 text-sm border-t border-secondary pt-2">
+                                                <span>Target Deficit to Close:</span>
+                                                <span id="summary-target-gap" style="font-weight: 700; color: var(--accent-orange);">0.0 mg</span>
+                                            </div>
+                                            <div class="flex-between mt-1 text-sm">
+                                                <span>Proposed Plan Iron:</span>
+                                                <span id="summary-plan-iron" style="font-weight: 700; color: var(--accent-cyan);">0.0 mg</span>
+                                            </div>
+                                            <div class="flex-between mt-1 text-sm">
+                                                <span>Proposed Plan Vit C:</span>
+                                                <span id="summary-plan-vitc" style="font-weight: 700; color: var(--accent-green);">0.0 mg</span>
+                                            </div>
+                                            <div class="flex-between mt-1 text-sm">
+                                                <span>Portion Scale Factor:</span>
+                                                <span id="summary-plan-scaling" style="font-weight: 700; color: var(--text-primary);">1.0x</span>
+                                            </div>
+
+                                            <p class="text-secondary text-xs mt-3" id="meal-genetic-note">🧬 LOW PRS risk — specific gene variants above are still clinically relevant</p>
+                                        </div>
+                                    </div>
+
+                                    <!-- Vitamin C Boosters -->
+                                    <div class="card" style="background: rgba(255,255,255,0.01); border: 1px solid var(--border-color);">
+                                        <div class="card-header">
+                                            <h3>Vitamin C Boosters</h3>
+                                        </div>
+                                        <div class="card-body">
+                                            <ul class="booster-list" id="meal-vitc-boosters">
+                                                <!-- Dynamically added -->
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 3. Whole-Food Dietary Framework Card -->
+                    <div class="card card-report mb-4">
+                        <div class="card-header bg-dark-glass">
+                            <span class="badge badge-report" style="background: var(--accent-cyan);">WHOLE-FOOD DIETARY FRAMEWORK</span>
+                            <h3 class="mt-2">Precision Macro & Allergy Adaptation</h3>
+                        </div>
+                        <div class="card-body">
+                            <div class="grid-2col">
+                                <!-- Recommended foods -->
+                                <div class="card" style="background: rgba(46, 213, 115, 0.02); border: 1px solid rgba(46, 213, 115, 0.1);">
+                                    <div class="card-header border-green">
+                                        <h3><i class="fa-solid fa-circle-arrow-up text-green"></i> Recommended Foods</h3>
+                                    </div>
+                                    <div class="card-body">
+                                        <ul class="foods-to-eat-list" id="meal-foods-eat">
+                                            <!-- Dynamically added -->
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <!-- Foods to avoid -->
+                                <div class="card" style="background: rgba(255, 71, 87, 0.02); border: 1px solid rgba(255, 71, 87, 0.1);">
+                                    <div class="card-header border-red">
+                                        <h3><i class="fa-solid fa-circle-xmark text-red"></i> Foods & Habits to Restrict</h3>
+                                    </div>
+                                    <div class="card-body">
+                                        <ul class="foods-to-avoid-list" id="meal-foods-avoid">
+                                            <!-- Dynamically added -->
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Advisor advice grid -->
+                            <div class="grid-2col mt-4">
+                                <div class="card" style="background: rgba(255,255,255,0.01); border: 1px solid var(--border-color);">
+                                    <div class="card-header">
+                                        <h3>Expected Metabolic Benefits</h3>
+                                    </div>
+                                    <div class="card-body">
+                                        <ul class="foods-to-eat-list" id="report-benefits-list" style="list-style: none; padding: 0;">
+                                            <!-- Dynamically populated -->
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <div class="card" style="background: rgba(255,255,255,0.01); border: 1px solid var(--border-color);">
+                                    <div class="card-header">
+                                        <h3>Clinical Nutrition Advice</h3>
+                                    </div>
+                                    <div class="card-body" id="report-clinical-advice-body" style="font-size: 0.9rem; line-height: 1.6;">
+                                        <!-- Dynamically populated -->
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Advisor suggested meal plan -->
+                            <div class="card mt-4" style="background: rgba(255,255,255,0.01); border: 1px solid var(--border-color);">
+                                <div class="card-header bg-dark-glass">
+                                    <h3>Macro-Balanced Whole-Food Meal Outline</h3>
+                                </div>
+                                <div class="card-body">
+                                    <div class="flex-column gap-3" id="report-advisor-meal-outline">
+                                        <!-- Dynamically populated -->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+
+            <!-- 4. EXPLORER PANEL -->
+            <section id="panel-explorer" class="content-panel">
+                <div class="card mb-4">
+                    <div class="card-header">
+                        <h3>Genomic Database & Nutrigenomics Directory</h3>
+                    </div>
+                    <div class="card-body">
+                        <div class="explorer-search">
+                            <i class="fa-solid fa-magnifying-glass search-icon"></i>
+                            <input type="text" class="form-control" id="explorer-search-input" placeholder="Search genes (e.g., TMPRSS6, MTHFR, G6PD, ACSL3)...">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="explorer-grid" id="explorer-genes-grid">
+                    <!-- Populated dynamically from GENE_NUTRITION_KB -->
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <!-- Main JavaScript Logic -->
+    <script src="app.js"></script>
+</body>
+</html>
