@@ -952,7 +952,7 @@ def load_datasets_and_train():
     # Drop leakage columns
     CBC_LEAKAGE_COLS = [
         'LBXHGB', 'LBXHCT', 'LBXRBCSI', 'LBXMCVSI', 'LBXMCHSI', 'LBXRDW', 
-        'iron_deficient', 'PRS_category'
+        'iron_deficient', 'PRS_category', 'SEQN'
     ]
     drop_cols = [c for c in CBC_LEAKAGE_COLS if c in df.columns]
     
@@ -979,18 +979,17 @@ def load_datasets_and_train():
     X_train, X_test, y_train, y_test = train_test_split(
         X, y_class, test_size=0.2, random_state=42, stratify=y_class
     )
-    smote = SMOTE(random_state=42)
-    X_train_sm, y_train_sm = smote.fit_resample(X_train, y_train)
 
     clf = xgb.XGBClassifier(
         n_estimators=1000,
-        learning_rate=0.02,
-        max_depth=4,
+        learning_rate=0.01,
+        max_depth=3,
         min_child_weight=5,
-        subsample=0.75,
-        colsample_bytree=0.6,
+        subsample=0.8,
+        colsample_bytree=0.8,
         reg_alpha=0.5,
         reg_lambda=2.0,
+        scale_pos_weight=4.0,
         eval_metric='logloss',
         early_stopping_rounds=30,
         random_state=42,
@@ -998,7 +997,7 @@ def load_datasets_and_train():
         verbosity=0
     )
     clf.fit(
-        X_train_sm, y_train_sm,
+        X_train, y_train,
         eval_set=[(X_test, y_test)],
         verbose=False
     )
@@ -1006,14 +1005,14 @@ def load_datasets_and_train():
     # Evaluate Classifier
     y_pred_class = clf.predict(X_test)
     y_prob = clf.predict_proba(X_test)[:, 1]
-    train_prob = clf.predict_proba(X_train_sm)[:, 1]
+    train_prob = clf.predict_proba(X_train)[:, 1]
     clf_metrics = {
         "accuracy": float(accuracy_score(y_test, y_pred_class)),
-        "precision": float(precision_score(y_test, y_pred_class)),
+        "precision": float(precision_score(y_test, y_pred_class, zero_division=0)),
         "recall": float(recall_score(y_test, y_pred_class)),
         "f1": float(f1_score(y_test, y_pred_class)),
         "test_auc": float(roc_auc_score(y_test, y_prob)),
-        "train_auc": float(roc_auc_score(y_train_sm, train_prob)),
+        "train_auc": float(roc_auc_score(y_train, train_prob)),
         "best_iteration": int(clf.best_iteration)
     }
 
